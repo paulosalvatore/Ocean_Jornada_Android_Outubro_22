@@ -33,8 +33,13 @@ class MainActivity : AppCompatActivity() {
             // Dentro das { } (chaves) do Listener, temos o código que é
             // executado no momento que o Click (toque no botão) acontece
 
-            // Atualizamos a propriedade `text` do `TextView`
-            tvResultado.text = etNome.text
+            if (etNome.text.isNotBlank()) {
+                // Atualizamos a propriedade `text` do `TextView`
+                tvResultado.text = etNome.text
+            } else {
+                // Exibimos uma mensagem de erro no input
+                etNome.error = "Digite um nome válido!"
+            }
         }
     }
 }
