@@ -3,6 +3,7 @@ package com.oceanbrasil.ocean_jornada_android_outubro_22
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         // Dentro de (), colocamos o ID do elemento (ex: R.id.tvResultado, R.id.btEnviar etc.)
         val btEnviar = findViewById<Button>(R.id.btEnviar)
         val tvResultado = findViewById<TextView>(R.id.tvResultado)
+        val etNome = findViewById<EditText>(R.id.etNome)
 
         // Para criar um listener para uma View (Button, TextView etc.), utilizamos a
         // declaração setOnClickListener { }
@@ -32,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             // executado no momento que o Click (toque no botão) acontece
 
             // Atualizamos a propriedade `text` do `TextView`
-            tvResultado.text = "Paulo Salvatore"
+            tvResultado.text = etNome.text
         }
     }
 }
