@@ -1,8 +1,11 @@
 package com.oceanbrasil.ocean_jornada_android_outubro_22
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class ResultadoActivity : AppCompatActivity() {
@@ -25,6 +28,22 @@ class ResultadoActivity : AppCompatActivity() {
         btVoltar.setOnClickListener {
             // Finalizamos a tela atual
             finish()
+
+            // Exemplo de caixa de diálogo para fechar
+//            val builder = AlertDialog.Builder(this)
+//            builder.setMessage("Deseja fechar?")
+//                .setPositiveButton(
+//                    android.R.string.ok
+//                ) { _, _ ->
+//                    finish()
+//                }
+//                .setNegativeButton(
+//                    android.R.string.cancel
+//                ) { _, _ ->
+//                    Toast.makeText(this, "Tudo bem :(", Toast.LENGTH_LONG).show()
+//                }
+//            builder.create()
+//            builder.show()
         }
     }
 }
