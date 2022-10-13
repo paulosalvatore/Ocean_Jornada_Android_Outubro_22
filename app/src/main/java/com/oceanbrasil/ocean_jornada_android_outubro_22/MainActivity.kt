@@ -1,11 +1,11 @@
 package com.oceanbrasil.ocean_jornada_android_outubro_22
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,10 +45,17 @@ class MainActivity : AppCompatActivity() {
 
         // Abrir Nova Tela
 
+        // Obtemos o botão `btAbrirNovaTela`
         val btAbrirNovaTela = findViewById<Button>(R.id.btAbrirNovaTela)
 
         btAbrirNovaTela.setOnClickListener {
+            // Criamos a intenção de abrir a tela ResultadoActivity
             val novaTelaIntent = Intent(this, ResultadoActivity::class.java)
+
+            // Inserimos dados extras nessa string
+            novaTelaIntent.putExtra("NOME_DIGITADO", etNome.text.toString())
+
+            // Solicitamos ao Android abrir uma nova Activity a partir da Intent criada
             startActivity(novaTelaIntent)
         }
     }
