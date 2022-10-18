@@ -10,6 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ocean_Jornada_Android_Outubro_22">
         <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.Ocean_Jornada_Android_Outubro_22.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ResultadoActivity"
             android:exported="false" />
         <activity
