@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.oceanbrasil.ocean_jornada_android_outubro_22.R
 import com.oceanbrasil.ocean_jornada_android_outubro_22.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -36,6 +38,10 @@ class HomeFragment : Fragment() {
         // Construção da lista
 
         // ----> Código aqui
+        val rvCriaturas = root.findViewById<RecyclerView>(R.id.rvCriaturas)
+        rvCriaturas.layoutManager = LinearLayoutManager(root.context)
+        // TODO: Criar o Adapter
+        rvCriaturas.adapter = null
 
         // Fim da construção da lista
 
