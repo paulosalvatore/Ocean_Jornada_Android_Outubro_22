@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.oceanbrasil.ocean_jornada_android_outubro_22.Criatura
+import com.oceanbrasil.ocean_jornada_android_outubro_22.CriaturasAdapter
 import com.oceanbrasil.ocean_jornada_android_outubro_22.R
 import com.oceanbrasil.ocean_jornada_android_outubro_22.databinding.FragmentHomeBinding
 
@@ -37,11 +39,15 @@ class HomeFragment : Fragment() {
 
         // Construção da lista
 
-        // ----> Código aqui
         val rvCriaturas = root.findViewById<RecyclerView>(R.id.rvCriaturas)
         rvCriaturas.layoutManager = LinearLayoutManager(root.context)
-        // TODO: Criar o Adapter
-        rvCriaturas.adapter = null
+
+        val criaturas = listOf(
+            Criatura("Criatura 1", R.drawable.ic_menu_gallery),
+            Criatura("Criatura 2", R.drawable.ic_menu_camera)
+        )
+
+        rvCriaturas.adapter = CriaturasAdapter(criaturas)
 
         // Fim da construção da lista
 
