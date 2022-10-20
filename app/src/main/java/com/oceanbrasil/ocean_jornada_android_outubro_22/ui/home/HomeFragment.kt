@@ -43,8 +43,8 @@ class HomeFragment : Fragment() {
         rvCriaturas.layoutManager = LinearLayoutManager(root.context)
 
         val criaturas = listOf(
-            Criatura("Criatura 1", R.drawable.ic_menu_gallery),
-            Criatura("Criatura 2", R.drawable.ic_menu_camera)
+            Criatura("Criatura 1", R.drawable.criatura_nestjs),
+            Criatura("Criatura 2", R.drawable.criatura_nestjs)
         )
 
         rvCriaturas.adapter = CriaturasAdapter(criaturas)
