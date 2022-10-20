@@ -15,8 +15,7 @@ class CriaturasAdapter(
             val tvNome = itemView.findViewById<TextView>(R.id.tvNome)
             val ivCriatura = itemView.findViewById<ImageView>(R.id.ivCriatura)
 
-            // TODO: Corrigir implementação
-//            tvNome.text = item.nome
+            tvNome.text = item.name
 //            ivCriatura.setImageResource(item.imagem)
         }
     }
