@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.oceanbrasil.ocean_jornada_android_outubro_22.Criatura
 import com.oceanbrasil.ocean_jornada_android_outubro_22.CriaturasAdapter
@@ -48,7 +48,8 @@ class HomeFragment : Fragment() {
         // Construção da lista
 
         val rvCriaturas = root.findViewById<RecyclerView>(R.id.rvCriaturas)
-        rvCriaturas.layoutManager = LinearLayoutManager(root.context)
+//        rvCriaturas.layoutManager = LinearLayoutManager(root.context)
+        rvCriaturas.layoutManager = GridLayoutManager(root.context, 2)
 
 //        val criaturas = listOf(
 //            Criatura("Criatura 1", R.drawable.criatura_nestjs),
