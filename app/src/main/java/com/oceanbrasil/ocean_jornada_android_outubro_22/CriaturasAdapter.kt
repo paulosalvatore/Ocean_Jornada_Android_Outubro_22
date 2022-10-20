@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class CriaturasAdapter(
     private val itens: List<Criatura>
@@ -16,7 +17,9 @@ class CriaturasAdapter(
             val ivCriatura = itemView.findViewById<ImageView>(R.id.ivCriatura)
 
             tvNome.text = item.name
+
 //            ivCriatura.setImageResource(item.imagem)
+            Glide.with(itemView).load(item.image).into(ivCriatura)
         }
     }
 
