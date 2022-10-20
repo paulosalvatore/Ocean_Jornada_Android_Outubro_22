@@ -42,12 +42,13 @@ class HomeFragment : Fragment() {
         val rvCriaturas = root.findViewById<RecyclerView>(R.id.rvCriaturas)
         rvCriaturas.layoutManager = LinearLayoutManager(root.context)
 
-        val criaturas = listOf(
-            Criatura("Criatura 1", R.drawable.criatura_nestjs),
-            Criatura("Criatura 2", R.drawable.criatura_nestjs)
-        )
-
-        rvCriaturas.adapter = CriaturasAdapter(criaturas)
+        // TODO: Corrigir implementação
+//        val criaturas = listOf(
+//            Criatura("Criatura 1", R.drawable.criatura_nestjs),
+//            Criatura("Criatura 2", R.drawable.criatura_nestjs)
+//        )
+//
+//        rvCriaturas.adapter = CriaturasAdapter(criaturas)
 
         // Fim da construção da lista
 
