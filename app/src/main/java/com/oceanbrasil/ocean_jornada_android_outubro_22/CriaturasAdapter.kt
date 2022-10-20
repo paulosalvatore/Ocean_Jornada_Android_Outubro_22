@@ -5,10 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
-
-data class Criatura(val nome: String, @DrawableRes val imagem: Int)
 
 class CriaturasAdapter(
     val itens: List<Criatura>
