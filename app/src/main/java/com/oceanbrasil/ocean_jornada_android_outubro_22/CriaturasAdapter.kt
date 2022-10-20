@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class CriaturasAdapter(
-    val itens: List<Criatura>
+    private val itens: List<Criatura>
 ) : RecyclerView.Adapter<CriaturasAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindView(item: Criatura) {
