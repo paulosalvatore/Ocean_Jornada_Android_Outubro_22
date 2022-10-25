@@ -39,10 +39,6 @@ class HomeFragment : Fragment() {
             ViewModelProvider(this)
                 .get(HomeViewModel::class.java)
 
-        val criaturasViewModel =
-            ViewModelProvider(this)
-                .get(CriaturasViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -61,58 +57,63 @@ class HomeFragment : Fragment() {
 //            Criatura("Criatura 1", R.drawable.criatura_nestjs),
 //            Criatura("Criatura 2", R.drawable.criatura_nestjs)
 //        )
-//
-//        rvCriaturas.adapter = CriaturasAdapter(criaturas)
+
+        val criaturasViewModel =
+            ViewModelProvider(this)
+                .get(CriaturasViewModel::class.java)
+
+        val criaturas = criaturasViewModel.criaturas
+        rvCriaturas.adapter = CriaturasAdapter(criaturas)
 
         // Carregamento dos dados da API
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://backend-livro-android-casa-cod.herokuapp.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        val service = retrofit.create(CriaturaService::class.java)
-
-        val call = service.listar()
-
-        // Exibimos a mensagem informando que iniciamos o carregamento
-        Toast.makeText(context, "Carregando criaturas...", Toast.LENGTH_SHORT).show()
-
-        // Iniciamos o carregamento
-        call.enqueue(object : Callback<List<Criatura>> {
-            // Em caso de sucesso
-            override fun onResponse(
-                call: Call<List<Criatura>>,
-                response: Response<List<Criatura>>
-            ) {
-                val resultado = response.body()
-
-                resultado?.let {
-                    // Exibimos uma mensagem de sucesso
-                    Toast.makeText(
-                        this@HomeFragment.context,
-                        "Criaturas carregadas com sucesso!",
-                        Toast.LENGTH_LONG
-                    ).show()
-
-                    // Carregamos a lista de criaturas na RecyclerView
-                    rvCriaturas.adapter = CriaturasAdapter(resultado)
-                }
-            }
-
-            // Em caso de falha
-            override fun onFailure(call: Call<List<Criatura>>, t: Throwable) {
-                // Exibimos uma mensagem dizendo que o carregamento falhou
-                Toast.makeText(
-                    this@HomeFragment.context,
-                    "Erro ao carregar criaturas :(",
-                    Toast.LENGTH_LONG
-                ).show()
-
-                // Enviamos o erro para o Logcat (onde ficam os logs no Android Studio)
-                Log.e("CRIATURAS", "Falha na requisição.", t)
-            }
-        })
+//        val retrofit = Retrofit.Builder()
+//            .baseUrl("https://backend-livro-android-casa-cod.herokuapp.com/")
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .build()
+//
+//        val service = retrofit.create(CriaturaService::class.java)
+//
+//        val call = service.listar()
+//
+//        // Exibimos a mensagem informando que iniciamos o carregamento
+//        Toast.makeText(context, "Carregando criaturas...", Toast.LENGTH_SHORT).show()
+//
+//        // Iniciamos o carregamento
+//        call.enqueue(object : Callback<List<Criatura>> {
+//            // Em caso de sucesso
+//            override fun onResponse(
+//                call: Call<List<Criatura>>,
+//                response: Response<List<Criatura>>
+//            ) {
+//                val resultado = response.body()
+//
+//                resultado?.let {
+//                    // Exibimos uma mensagem de sucesso
+//                    Toast.makeText(
+//                        this@HomeFragment.context,
+//                        "Criaturas carregadas com sucesso!",
+//                        Toast.LENGTH_LONG
+//                    ).show()
+//
+//                    // Carregamos a lista de criaturas na RecyclerView
+//                    rvCriaturas.adapter = CriaturasAdapter(resultado)
+//                }
+//            }
+//
+//            // Em caso de falha
+//            override fun onFailure(call: Call<List<Criatura>>, t: Throwable) {
+//                // Exibimos uma mensagem dizendo que o carregamento falhou
+//                Toast.makeText(
+//                    this@HomeFragment.context,
+//                    "Erro ao carregar criaturas :(",
+//                    Toast.LENGTH_LONG
+//                ).show()
+//
+//                // Enviamos o erro para o Logcat (onde ficam os logs no Android Studio)
+//                Log.e("CRIATURAS", "Falha na requisição.", t)
+//            }
+//        })
 
         // Fim da construção da lista
 
