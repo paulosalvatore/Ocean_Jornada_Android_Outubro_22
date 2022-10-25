@@ -15,6 +15,7 @@ import com.oceanbrasil.ocean_jornada_android_outubro_22.CriaturasAdapter
 import com.oceanbrasil.ocean_jornada_android_outubro_22.R
 import com.oceanbrasil.ocean_jornada_android_outubro_22.api.CriaturaService
 import com.oceanbrasil.ocean_jornada_android_outubro_22.databinding.FragmentHomeBinding
+import com.oceanbrasil.ocean_jornada_android_outubro_22.viewmodel.CriaturasViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -35,7 +36,12 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(this)
+                .get(HomeViewModel::class.java)
+
+        val criaturasViewModel =
+            ViewModelProvider(this)
+                .get(CriaturasViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -83,7 +89,11 @@ class HomeFragment : Fragment() {
 
                 resultado?.let {
                     // Exibimos uma mensagem de sucesso
-                    Toast.makeText(this@HomeFragment.context, "Criaturas carregadas com sucesso!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        this@HomeFragment.context,
+                        "Criaturas carregadas com sucesso!",
+                        Toast.LENGTH_LONG
+                    ).show()
 
                     // Carregamos a lista de criaturas na RecyclerView
                     rvCriaturas.adapter = CriaturasAdapter(resultado)
@@ -93,7 +103,11 @@ class HomeFragment : Fragment() {
             // Em caso de falha
             override fun onFailure(call: Call<List<Criatura>>, t: Throwable) {
                 // Exibimos uma mensagem dizendo que o carregamento falhou
-                Toast.makeText(this@HomeFragment.context, "Erro ao carregar criaturas :(", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this@HomeFragment.context,
+                    "Erro ao carregar criaturas :(",
+                    Toast.LENGTH_LONG
+                ).show()
 
                 // Enviamos o erro para o Logcat (onde ficam os logs no Android Studio)
                 Log.e("CRIATURAS", "Falha na requisição.", t)
