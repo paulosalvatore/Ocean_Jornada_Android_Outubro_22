@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_jornada_android_outubro_22.view.home
+package com.oceanbrasil.ocean_jornada_android_outubro_22.view.criaturas
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.oceanbrasil.ocean_jornada_android_outubro_22.view.CriaturasAdapter
 import com.oceanbrasil.ocean_jornada_android_outubro_22.R
-import com.oceanbrasil.ocean_jornada_android_outubro_22.databinding.FragmentHomeBinding
+import com.oceanbrasil.ocean_jornada_android_outubro_22.databinding.FragmentCriaturasBinding
 import com.oceanbrasil.ocean_jornada_android_outubro_22.viewmodel.CriaturasViewModel
 
-class HomeFragment : Fragment() {
+class CriaturasFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentCriaturasBinding? = null
 
     // This property is only valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
@@ -26,7 +26,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentCriaturasBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         // Construção da lista
@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
         criaturasViewModel.criaturas.observe(viewLifecycleOwner) {
             // Exibimos uma mensagem de sucesso
             Toast.makeText(
-                this@HomeFragment.context,
+                this@CriaturasFragment.context,
                 "Criaturas carregadas com sucesso!",
                 Toast.LENGTH_LONG
             ).show()

@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.oceanbrasil.ocean_jornada_android_outubro_22.view.home.HomeFragment"
+        android:name="com.oceanbrasil.ocean_jornada_android_outubro_22.view.criaturas.CriaturasFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_criaturas" />
 
     <fragment
         android:id="@+id/nav_gallery"
