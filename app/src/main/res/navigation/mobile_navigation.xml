@@ -10,16 +10,4 @@
         android:name="com.oceanbrasil.ocean_jornada_android_outubro_22.view.criaturas.CriaturasFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_criaturas" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.oceanbrasil.ocean_jornada_android_outubro_22.view.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.oceanbrasil.ocean_jornada_android_outubro_22.view.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
 </navigation>
