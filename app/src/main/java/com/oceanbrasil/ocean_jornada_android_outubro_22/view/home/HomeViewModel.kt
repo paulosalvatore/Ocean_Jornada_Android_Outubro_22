@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_jornada_android_outubro_22.ui.home
+package com.oceanbrasil.ocean_jornada_android_outubro_22.view.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

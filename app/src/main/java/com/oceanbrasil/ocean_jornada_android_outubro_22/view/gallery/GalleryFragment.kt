@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_jornada_android_outubro_22.ui.gallery
+package com.oceanbrasil.ocean_jornada_android_outubro_22.view.gallery
 
 import android.os.Bundle
 import android.view.LayoutInflater

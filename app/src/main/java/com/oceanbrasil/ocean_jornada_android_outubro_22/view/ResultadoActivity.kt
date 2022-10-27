@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_jornada_android_outubro_22
+package com.oceanbrasil.ocean_jornada_android_outubro_22.view
 
 //import android.content.DialogInterface
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.TextView
 //import android.widget.Toast
 //import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.oceanbrasil.ocean_jornada_android_outubro_22.R
 
 class ResultadoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

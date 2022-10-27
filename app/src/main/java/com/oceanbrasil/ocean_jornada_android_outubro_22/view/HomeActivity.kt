@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_jornada_android_outubro_22
+package com.oceanbrasil.ocean_jornada_android_outubro_22.view
 
 import android.os.Bundle
 import android.view.Menu
@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.oceanbrasil.ocean_jornada_android_outubro_22.R
 import com.oceanbrasil.ocean_jornada_android_outubro_22.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {

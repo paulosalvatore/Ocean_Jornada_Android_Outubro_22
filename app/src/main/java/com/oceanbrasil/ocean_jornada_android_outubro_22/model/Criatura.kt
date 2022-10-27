@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_jornada_android_outubro_22
+package com.oceanbrasil.ocean_jornada_android_outubro_22.model
 
 data class Criatura(
     val number: Int,

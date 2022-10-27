@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_jornada_android_outubro_22
+package com.oceanbrasil.ocean_jornada_android_outubro_22.view
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.oceanbrasil.ocean_jornada_android_outubro_22.model.Criatura
+import com.oceanbrasil.ocean_jornada_android_outubro_22.R
 
 class CriaturasAdapter(
     private val itens: List<Criatura>

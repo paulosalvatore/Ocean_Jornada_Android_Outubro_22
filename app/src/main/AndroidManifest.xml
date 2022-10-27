@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ocean_Jornada_Android_Outubro_22">
         <activity
-            android:name=".HomeActivity"
+            android:name=".view.HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.Ocean_Jornada_Android_Outubro_22.NoActionBar">
@@ -23,10 +23,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ResultadoActivity"
+            android:name=".view.ResultadoActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

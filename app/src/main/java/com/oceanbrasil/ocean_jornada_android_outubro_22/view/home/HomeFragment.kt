@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_jornada_android_outubro_22.ui.home
+package com.oceanbrasil.ocean_jornada_android_outubro_22.view.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.oceanbrasil.ocean_jornada_android_outubro_22.CriaturasAdapter
+import com.oceanbrasil.ocean_jornada_android_outubro_22.view.CriaturasAdapter
 import com.oceanbrasil.ocean_jornada_android_outubro_22.R
 import com.oceanbrasil.ocean_jornada_android_outubro_22.databinding.FragmentHomeBinding
 import com.oceanbrasil.ocean_jornada_android_outubro_22.viewmodel.CriaturasViewModel
