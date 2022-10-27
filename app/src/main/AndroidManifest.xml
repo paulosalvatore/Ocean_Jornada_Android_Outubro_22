@@ -23,10 +23,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.ResultadoActivity"
+            android:name=".view.legacy.ResultadoActivity"
             android:exported="false" />
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.legacy.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

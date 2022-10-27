@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_jornada_android_outubro_22.view
+package com.oceanbrasil.ocean_jornada_android_outubro_22.view.legacy
 
 //import android.content.DialogInterface
 import android.os.Bundle
