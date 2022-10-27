@@ -5,10 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.oceanbrasil.ocean_jornada_android_outubro_22.model.Criatura
 import com.oceanbrasil.ocean_jornada_android_outubro_22.R
+import com.oceanbrasil.ocean_jornada_android_outubro_22.view.criaturas.CriaturasFragmentDirections
 
 class CriaturasAdapter(
     private val itens: List<Criatura>
@@ -22,6 +24,11 @@ class CriaturasAdapter(
 
 //            ivCriatura.setImageResource(item.imagem)
             Glide.with(itemView).load(item.image).into(ivCriatura)
+
+            itemView.setOnClickListener {
+                val action = CriaturasFragmentDirections.actionNavCriaturasToNavCriatura()
+                itemView.findNavController().navigate(action)
+            }
         }
     }
 

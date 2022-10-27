@@ -9,7 +9,11 @@
         android:id="@+id/nav_criaturas"
         android:name="com.oceanbrasil.ocean_jornada_android_outubro_22.view.criaturas.CriaturasFragment"
         android:label="@string/menu_criaturas"
-        tools:layout="@layout/fragment_criaturas" />
+        tools:layout="@layout/fragment_criaturas" >
+        <action
+            android:id="@+id/action_nav_criaturas_to_nav_criatura"
+            app:destination="@id/nav_criatura" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_criatura"
