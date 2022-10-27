@@ -19,5 +19,12 @@
         android:id="@+id/nav_criatura"
         android:name="com.oceanbrasil.ocean_jornada_android_outubro_22.view.criatura.CriaturaFragment"
         android:label="@string/menu_criatura"
-        tools:layout="@layout/fragment_criatura" />
+        tools:layout="@layout/fragment_criatura" >
+        <argument
+            android:name="nome"
+            app:argType="string" />
+        <argument
+            android:name="imagemUrl"
+            app:argType="string" />
+    </fragment>
 </navigation>

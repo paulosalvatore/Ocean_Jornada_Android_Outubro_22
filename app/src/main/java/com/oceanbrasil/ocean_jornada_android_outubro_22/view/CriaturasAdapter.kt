@@ -26,7 +26,7 @@ class CriaturasAdapter(
             Glide.with(itemView).load(item.image).into(ivCriatura)
 
             itemView.setOnClickListener {
-                val action = CriaturasFragmentDirections.actionNavCriaturasToNavCriatura()
+                val action = CriaturasFragmentDirections.actionNavCriaturasToNavCriatura(item.name, item.image)
                 itemView.findNavController().navigate(action)
             }
         }
